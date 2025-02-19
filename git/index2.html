@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lionaire Infotech</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #875403;
+            padding: 15px 20px;
+            height: 50px;
+            width: 100%;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: justify;
+        }
+        .logo1 {
+            margin-top: -20px;
+            height: 17%;
+            width: 13%;
+        }
+        .name {
+            position: relative;
+            top: -50px;
+            font-size: 24px;
+            font-weight: bold;
+            right: -80px;
+        }
+        .nav-links {
+            margin-top: -40px;
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            padding-right: 90px;
+        }
+        .nav-links li {
+            position: relative;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #cf6d0b;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background: #a85e04;
+            list-style: none;
+            padding: 10px;
+            top: 100%;
+            left: 0;
+            right: 10px;
+            min-width: 150px;
+        }
+        .dropdown-menu li {
+            padding: 8px 12px;
+        }
+        .dropdown-menu a {
+            color: white;
+            display: block;
+        }
+        .dropdown-menu a:hover {
+            background: #f4a261;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: linear-gradient(to left, #100801e7, #683811e0, #d09a54, #dba96f);
+        }
+        .hero-left img {
+            height: 300%;
+            width: 500%;
+            position: relative;
+            margin-top: 0%;
+            left: -200px;
+            max-width: 120%;
+            border-radius: 10px;
+        }
+        .hero-right h1 {
+            font: bolder;
+            text-shadow: #48321ee7;
+            position: relative;
+            left: -30px;
+            font-size: 60px;
+            margin: 5px 0;
+            padding-bottom: 30px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .hero-right h1:hover {
+            transform: scale(1.1);
+            color: #ed650a;
+        }
+        .hero-right h3 {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+            position: relative;
+            left: -100px;
+            white-space: nowrap; /* Ensures the text stays in a single line */
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+            .logo {
+                margin-bottom: 10px;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero {
+                flex-direction: column;
+                padding: 20px;
+            }
+            .hero-left img {
+                left: 0;
+                max-width: 100%;
+            }
+            .hero-right h1 {
+                left: 0;
+                font-size: 40px;
+                text-align: center;
+            }
+        }
+       .about {
+          background: linear-gradient(to left, #100801e7, #683811e0, #d09a54, #dba96f);
+          
+       }
+      
+        .about-section {
+           color: aliceblue;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px; 
+    }
+    .about-text {
+        flex: 1;
+        padding-right: 20px;
+        color: #333; /* Text color */
+    }
+    .about-image {
+        flex: 1;
+        text-align: right;
+    }
+    .about-image img {
+        max-width: 100%;
+        border-radius: 10px; /* Optional: Add rounded corners to the image */
+    }
+    @media (max-width: 768px) {
+        .about-section {
+            flex-direction: column;
+            text-align: center; /* Center text on smaller screens */
+        }
+        .about-text, .about-image {
+            padding: 0;
+            text-align: center;
+        }
+        .about-image {
+            margin-top: 20px; /* Add margin for spacing */
+        }
+    }
+        
+        </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img class="logo1" src="./image/logo.png" alt="">
+            <h1 class="name">LIONAIRE INFOTECH</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li class="dropdown">
+                <a href="#">Menu</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <div class="hero-left">
+            <img src="./image/lion.PNG" alt="image">
+        </div>
+        <div class="hero-right">
+            <h1 class="hover-effect">Limitless</h1>
+            <h1 class="hover-effect">Lethal</h1>
+            <h1 class="hover-effect">Legendary</h1>
+            <h3>Welcome to LIONAIRE INFOTECH Private Limited</h3>
+        </div>
+    </div>
+    <div class="about">
+       <div class="about-section">
+        <div class="about-text">
+            <h1>About Us</h1>
+            <p>LIONAIRE INFOTECH Private Limited is an emerging IT company driven by a bold vision—to revolutionize India's future through cutting-edge digital innovations. We are committed to transforming industries, simplifying lifestyles, and enhancing the overall digital ecosystem in India with our innovative technology solutions.</p>
+            <p>At LIONAIRE INFOTECH, we don’t just create technology—we create possibilities. Our mission is to bridge gaps, empower people, and unlock new opportunities through innovative digital solutions that enhance efficiency, connectivity, and accessibility across every sector.</p>
+            <p>With a focus on ease, efficiency, and innovation, we aim to redefine the way India interacts with technology—whether it’s through AI-powered platforms, next-gen applications, or user-centric digital ecosystems. As we move forward, our commitment remains steadfast—to shape a future where technology is not just an enabler but a game-changer for India's progress.</p>
+        </div>
+        <div class="about-image">
+            <img src="./image/about-image.jpg" alt="About Us Image">
+        </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
